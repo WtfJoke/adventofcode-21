@@ -6,12 +6,8 @@ fun countIncreasing(vararg depths: Int): Int {
     println(triplets)
 
     var increasing = 0
-    triplets.forEachIndexed { index: Int, depth: Int ->
-        if (index == 0) {
-            return@forEachIndexed
-        }
-        val previousDepth = triplets[index - 1]
-        if (depth > previousDepth) {
+    for (index in 1 until triplets.size){
+        if (triplets[index] > triplets[index - 1]) {
             increasing++
         }
     }

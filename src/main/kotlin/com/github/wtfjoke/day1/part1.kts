@@ -19,12 +19,8 @@
  */
 fun countIncreasing(vararg depths: Int): Int {
     var increasing = 0
-    depths.forEachIndexed { index: Int, depth: Int ->
-        if (index == 0) {
-            return@forEachIndexed
-        }
-        val previousDepth = depths[index - 1]
-        if (depth > previousDepth) {
+    for (index in 1 until depths.size){
+        if (depths[index] > depths[index - 1]) {
             increasing++
         }
     }
