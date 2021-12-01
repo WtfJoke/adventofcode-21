@@ -1,5 +1,5 @@
 plugins {
-    kotlin("jvm") version "1.6.0"
+    kotlin("jvm") version "1.5.31"
 }
 
 group = "com.github.wtfjoke"
@@ -12,4 +12,5 @@ repositories {
 dependencies {
     implementation(kotlin("stdlib"))
     implementation(kotlin("script-runtime"))
+    implementation(kotlin("reflect"))
 }
