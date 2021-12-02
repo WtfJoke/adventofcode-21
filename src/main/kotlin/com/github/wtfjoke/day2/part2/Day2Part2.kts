@@ -17,7 +17,7 @@ fun move(inputs: List<InputWithAimDirection>): PositionWithAim {
 val inputs = Paths.get("..", "inputs.txt").toFile()
     .useLines { it.toList() }
     .map { it.substringBefore(' ') to it.substringAfter(' ') }
-    .map { Direction.valueOf(it.first.uppercase()) to it.second.toInt()}
+    .map { Direction.valueOf(it.first.uppercase()) to it.second.toInt() }
     .map { InputWithAimDirection(it.first, it.second) }
 
 move(inputs).multiply()
