@@ -25,4 +25,5 @@ jobs:
       - uses: stefanzweifel/git-auto-commit-action@v4  # Step that pushes these local changes back to your github repo
         with:
           commit_message: ":christmas_tree: Update badges"
+          commit_user_name: "Elves"
           file_pattern: README.md
